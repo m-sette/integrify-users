@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Link } from "react-router-dom";
+import "./users.css"
 const Contacts = () => {
 
     const API_URL = "https://jsonplaceholder.typicode.com/users";
@@ -19,17 +20,19 @@ const Contacts = () => {
 
     let listContacts = contacts.map(contact => {
         return(
-            <div>
-                <p>{contact.name}</p>
-                <p>@{contact.username}</p>
-                <p>{contact.website}</p>
-                <Link to={`/user/${contact.id}`}>More Details</Link>
-            </div>
+
+                <div className="card" >
+                    <p>{contact.name}</p>
+                    <p>@{contact.username}</p>
+                    <p>{contact.website}</p>
+                    <Link to={`/user/${contact.id}`}>More Details</Link>
+                </div>
+
         )
     })
 
     return (
-        <div>
+        <div className="card-container">
             {listContacts}
         </div>
     );
