@@ -18,7 +18,7 @@ const Contacts = () => {
 
   let listContacts = contacts.map((contact) => {
     return (
-      <div className="card">
+      <div className="card" key={contact.id}>
         <div className="avatar">
             <p>{contact.name.charAt(0)}</p>
         </div>

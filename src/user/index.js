@@ -1,5 +1,6 @@
 import {useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import './user.css'
 
 const User = () => {
     const { id } = useParams()
@@ -18,22 +19,23 @@ const User = () => {
     },);
 
     return (
-        <div>
+        <div className="card">
             <ul>
                 <li>Name: {user.name}</li>
                 <li>username: {user.username}</li>
                 <li>email: {user.email}</li>
                 <li>phone: {user.phone}</li>
                 <li>website: {user.website}</li>
+                <li>Company: {user.company && user.company.name}</li>
 
             </ul>
-            <p>address:</p>
-            {/*<ul>
-                <li>Street: {user.address.street}</li>
-                <li>suite: {user.address.suite}</li>
-                <li>City: {user.address.city}</li>
-                <li>Zip: {user.address.zipcode}</li>
-            </ul>*/}
+            <h2>address:</h2>
+            <ul>
+                <li>Street: {user.address && user.address.street}</li>
+                <li>suite: {user.address && user.address.suite}</li>
+                <li>City: {user.address && user.address.city}</li>
+                <li>Zip: {user.address && user.address.zipcode}</li>
+            </ul>
         </div>
     );
 }

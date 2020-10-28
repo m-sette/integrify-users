@@ -1,0 +1,21 @@
+.card {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+
+ul {
+    color: rgb(42, 42, 44);
+    font-size: 2rem;
+    list-style-type: none;
+}
