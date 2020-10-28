@@ -21,13 +21,14 @@ const Contacts = () => {
     let listContacts = contacts.map(contact => {
         return(
 
+            <Link to={`/user/${contact.id}`}>
                 <div className="card" >
                     <p>{contact.name}</p>
                     <p>@{contact.username}</p>
                     <p>{contact.website}</p>
-                    <Link to={`/user/${contact.id}`}>More Details</Link>
+                    
                 </div>
-
+            </Link>
         )
     })
 

@@ -1,17 +1,21 @@
-.card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+.card-container {       
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 1em;
 }
 
 .card {
-   border: 1px solid black;
-   background: #ffffff;
-   border-radius: 15px;
-   justify-self: center;
-   align-self: center;
-   margin: 10px;
-   padding: 10px;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-   text-align: center;
+	border: 1px solid black;
+	background: #ffffff;
+   	border-radius: 15px;
+   	justify-self: center;
+   	align-self: center;
+   	margin: 10px;
+   	padding: 10px;
+   	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+   	text-align: center;
+}
+
+.card:hover {
+	transform: scale(1.1);
 }

@@ -15,7 +15,7 @@ const User = () => {
 
     useEffect(() => {
         fetchData();
-    },{});
+    },);
 
     return (
         <div>
