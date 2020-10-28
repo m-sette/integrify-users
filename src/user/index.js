@@ -1,4 +1,4 @@
-import {useParams } from "react-router-dom";
+import {useParams, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import './user.css'
 
@@ -19,7 +19,7 @@ const User = () => {
     },);
 
     return (
-        <div className="card">
+        <div className="card-user">
             <ul>
                 <li>Name: {user.name}</li>
                 <li>username: {user.username}</li>
@@ -36,6 +36,7 @@ const User = () => {
                 <li>City: {user.address && user.address.city}</li>
                 <li>Zip: {user.address && user.address.zipcode}</li>
             </ul>
+            <Link to={`/`}>Return</Link>
         </div>
     );
 }
